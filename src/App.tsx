@@ -3,7 +3,6 @@ import {
   Gltf,
   OrbitControls,
   PerformanceMonitor,
-  StatsGl,
 } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import { Splat } from './splat-object';
