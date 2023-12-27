@@ -5,4 +5,5 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   assetsInclude: ['**/*.gltf', '**/*.splat'],
   plugins: [react()],
+  base: '/vite-deploy-demo',
 });
