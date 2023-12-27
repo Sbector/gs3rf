@@ -11,7 +11,7 @@ import { Splat } from './splat-object';
 import { OrbitingSuzi } from './suzi';
 import { Leva, useControls } from 'leva';
 import { Suspense, useState } from 'react';
-import url from ;
+import url from './basura1.splat';
 
 // import telco from "./telco.gltf";
 
