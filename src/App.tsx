@@ -11,6 +11,7 @@ import { Splat } from './splat-object';
 import { OrbitingSuzi } from './suzi';
 import { Leva, useControls } from 'leva';
 import { Suspense, useState } from 'react';
+import url from ;
 
 // import telco from "./telco.gltf";
 
@@ -63,7 +64,7 @@ const splatUrls = [
   // telco7k,
   // model30k,
 
-  './basura1.splat',
+  url,
 ] as const;
 
 function App() {
