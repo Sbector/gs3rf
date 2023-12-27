@@ -211,7 +211,7 @@ export function Splat({
         depthWrite={false}
         transparent={true}
       />
-      <axesHelper args={[5]} />
+      {/* <axesHelper args={[5]} /> */}
     </mesh>
   );
 }
