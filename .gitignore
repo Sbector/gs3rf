@@ -1,5 +1,4 @@
 node_modules
 *.ply
-*.splat
 *.gltf
 .DS_Store
