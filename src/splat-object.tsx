@@ -3,6 +3,7 @@ import * as THREE from 'three';
 import SplatSortWorker from './splat-sort-worker?worker';
 import { fragmentShaderSource, vertexShaderSource } from './splat-shaders';
 import { useFrame, useThree } from '@react-three/fiber';
+import splaturl from './basura1.splat';
 
 const computeFocalLengths = (
   width: number,
@@ -19,7 +20,7 @@ const computeFocalLengths = (
 };
 
 export function Splat({
-  url = 'https://antimatter15.com/splat-data/train.splat',
+  url = splaturl,
   maxSplats = Infinity,
 }: {
   url?: string;

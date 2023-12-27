@@ -11,6 +11,7 @@ import { Splat } from './splat-object';
 import { OrbitingSuzi } from './suzi';
 import { Leva, useControls } from 'leva';
 import { Suspense, useState } from 'react';
+import url from './basura1.splat';
 
 // import telco from "./telco.gltf";
 
@@ -63,14 +64,7 @@ const splatUrls = [
   // telco7k,
   // model30k,
 
-  'https://antimatter15.com/splat-data/train.splat',
-  'https://antimatter15.com/splat-data/plush.splat',
-  'https://antimatter15.com/splat-data/truck.splat',
-  'https://antimatter15.com/splat-data/garden.splat',
-  'https://antimatter15.com/splat-data/treehill.splat',
-  'https://antimatter15.com/splat-data/stump.splat',
-  'https://antimatter15.com/splat-data/bicycle.splat',
-  'https://media.reshot.ai/models/nike_next/model.splat',
+  url,
 ] as const;
 
 function App() {
