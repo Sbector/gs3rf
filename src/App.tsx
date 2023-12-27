@@ -6,64 +6,14 @@ import {
   StatsGl,
 } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
-import { Box } from './box';
 import { Splat } from './splat-object';
-import { OrbitingSuzi } from './suzi';
 import { Leva, useControls } from 'leva';
 import { Suspense, useState } from 'react';
 import url from './basura1.splat';
 
-// import telco from "./telco.gltf";
-
-// import output from './output.splat';
-// import model30k from './model30k.splat';
-// import telco7k from './telco7k.splat';
-// import telco14k from './telco14k.splat';
-// import telco21k from './telco21k.splat';
-// import telco30k from './telco30k.splat';
-// import telco414k from './telco414k.splat';
-// import telco421k from './telco421k.splat';
-// import telco428k from './telco428k.splat';
-// import telco435k from './telco435k.splat';
-// import telco442k from './telco442k.splat';
-// import telco449k from './telco449k.splat';
-// import telco456k from './telco456k.splat';
-// import telco463k from './telco463k.splat';
-// import telco4200k from './telco4200k.splat';
-// import telco_2_7k from './telco-2-7k.splat';
-// import telco_2_14k from './telco-2-14k.splat';
-// import telco_2_21k from './telco-2-21k.splat';
-// import telco_2_28k from './telco-2-28k.splat';
-// import telco_2_42k from './telco-2-42k.splat';
-
 const gltfUrls = [
-  // telco
 ] as const;
-
 const splatUrls = [
-
-  // output,
-
-  // telco_2_42k,
-  // telco_2_28k,
-  // telco_2_21k,
-  // telco_2_14k,
-  // telco_2_7k,
-  // telco4200k,
-  // telco463k,
-  // telco456k,
-  // telco449k,
-  // telco442k,
-  // telco435k,
-  // telco428k,
-  // telco421k,
-  // telco414k,
-  // telco30k,
-  // telco21k,
-  // telco14k,
-  // telco7k,
-  // model30k,
-
   url,
 ] as const;
 
@@ -135,14 +85,13 @@ function App() {
           }}
         />
 
-        <StatsGl />
+        
 
-        <OrbitControls />
+        <OrbitControls rotateSpeed={0.2}/>
 
-        <Box position={[-1, 0, 0]} />
-        <Box position={[1, 0, 0]} />
-
-        <OrbitingSuzi />
+        
+        <axesHelper args={[5]} />
+        <gridHelper />
 
         {gltfUrl && <Suspense fallback={null}>
           <group position={[2, 0, 0]} rotation={[0, 0, 0]}  >
@@ -155,21 +104,7 @@ function App() {
         </group>}
         <Environment preset="city" />
       </Canvas>
-      <div className="absolute bottom-0 left-0 rounded-lg bg-white shadow border-gray-200 bg-white p-2 m-4">
-        {factor < 1.0 && (throttleSplats || throttleDpr) ? (
-          <div className="text-red-500">
-            Quality degraded to save FPS! You can disable this in settings.
-          </div>
-        ) : null}
-        {factor < 0.5 && !throttleSplats && !throttleDpr ? (
-          <div className="text-red-500">
-            FPS degraded! You can enable quality tuning in settings.
-          </div>
-        ) : null}
-        <div>Perf factor: {factor.toFixed(2)}</div>
-        <div>Applied pixel ratio: {effectiveDpr.toFixed(2)}</div>
-        <div>Applied splat count: {(effectiveSplats / 1e6).toFixed(2)}M</div>
-      </div>
+      
     </>
   );
 }

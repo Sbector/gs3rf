@@ -155,7 +155,7 @@ export function Splat({
   const instanceCount = Math.min(buffers.quat.length / 4, maxSplats);
 
   return (
-    <mesh ref={ref} renderOrder={10} rotation={[Math.PI, 0, 0]}>
+    <mesh ref={ref} renderOrder={10} rotation={[Math.PI*1.16, Math.PI *1.07, Math.PI*1.999]} position={[-4.5,-6,-3.7]}>
       <instancedBufferGeometry
         key={instanceCount}
         instanceCount={instanceCount}
@@ -211,6 +211,7 @@ export function Splat({
         depthWrite={false}
         transparent={true}
       />
+      <axesHelper args={[5]} />
     </mesh>
   );
 }
